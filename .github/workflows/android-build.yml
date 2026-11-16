@@ -24,10 +24,20 @@ jobs:
           gradle-version: '8.7'
 
       - name: Build Debug APK
-        run: gradle assembleDebug --no-daemon
+        run: |
+          if [ -f "settings.gradle.kts" ]; then
+            gradle assembleDebug --no-daemon
+          elif [ -f "simhuber-android/settings.gradle.kts" ]; then
+            cd simhuber-android
+            gradle assembleDebug --no-daemon
+          else
+            echo "找不到 settings.gradle.kts，当前目录文件如下："
+            ls -la
+            exit 1
+          fi
 
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
         with:
           name: SIMHuber-debug-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: "**/app/build/outputs/apk/debug/app-debug.apk"
