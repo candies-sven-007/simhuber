@@ -53,7 +53,7 @@ fun EsimManagerScreen(
                     OutlinedTextField(
                         value = lpaInput,
                         onValueChange = { lpaInput = it },
-                        label = { Text("LPA:1\$SM-DP+\$MatchingID") },,
+                        label = { Text("LPA 激活码 (SM-DP+ / MatchingID)") },
                         modifier = Modifier.fillMaxWidth(),
                         singleLine = true
                     )
