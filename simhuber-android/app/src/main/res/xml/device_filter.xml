@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- USB CCID Smart Card Readers (Class 0x0B = 11) -->
+    <usb-device class="11" />
+    <!-- Alcor Micro / Generic CCID Readers -->
+    <usb-device vendor-id="1423" />
+    <!-- ACS (Advanced Card Systems) -->
+    <usb-device vendor-id="1839" />
+    <!-- Identiv / SCM Microsystems -->
+    <usb-device vendor-id="1254" />
+    <!-- Gemalto / Thales -->
+    <usb-device vendor-id="2278" />
+    <!-- Feitian Technologies -->
+    <usb-device vendor-id="2414" />
+</resources>
